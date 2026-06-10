@@ -491,8 +491,11 @@ These settings are not affected by `EnableUIResizing` and `ForceUIResizing`, but
 - You can download some pre-built asset bundles with TextMeshPro fonts in the release tab (TMP_Font_AssetBundles), but for now, they are not particularly well tested. If you want to try them out, simply download the .zip folder and put one of the font assets into the game folder. Then configure it up by writing the name of the file in the configuration file in `OverrideFontTextMeshPro` or `FallbackFontTextMeshPro`.
 - [sorrowmoil-MoeFont-for-XUnity.AutoTranslator](https://github.com/sorrowmoil/sorrowmoil-MoeFont-for-XUnity.AutoTranslator) - Repository full of fonts for variuous versions of Unity (zh-CN), more information in https://github.com/bbepis/XUnity.AutoTranslator/issues/842.
 
+##### How to create new custom fonts
+You will have to create the font in the same version of Unity Editor as your game and then add it to an AssetBundle. Check [this guide](https://github.com/bbepis/XUnity.AutoTranslator/wiki/TextMeshPro-Font-Asset-Creation-&-Packaging-Guide) for detailed steps.
+
 #### Reducing Translation Requests
-The following aims at reducing the number of requests send to the translation endpoint:
+The following aims at reducing the number of requests sent to the translation endpoint:
  * `EnableBatching`: Batches several translation requests into a single with supported endpoints.
  * `UseStaticTranslations`: Enables usage of internal lookup dictionary of various english-to-japanese terms.
  * `MaxCharactersPerTranslation`: Specifies the maximum length of a text to translate. Any texts longer than this is ignored by the plugin. Cannot be greater than 1000. **Never redistribute this mod with this value greater than 400**
